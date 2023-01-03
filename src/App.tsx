@@ -1,58 +1,41 @@
 import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
+import {Route, Routes} from "react-router-dom";
+
+import {LeftAside, RightAside} from '@/components';
+import ROUTES, {CATEGORIES} from "@/routes";
+import {IRoutesItem} from "@/routes/type";
+import Header from "./components/Header";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
-    </div>
-  );
+	const routes = ROUTES.map(r => r.items).flat(Infinity) as IRoutesItem[];
+	return (
+		<div className="app">
+			<LeftAside/>
+			<main className="main">
+				<Header/>
+				<Routes>
+					{
+						routes.map(route => {
+							const Element = route.component;
+							return (
+								<Route path={route.url} element={<Element/>} key={route.url}/>
+							)
+						})
+					}
+					{
+						CATEGORIES.map(category => {
+							const Element = category.component;
+							return (
+								<Route path={category.url} element={<Element/>}
+											 key={category.url}/>
+							)
+						})
+					}
+				</Routes>
+			</main>
+			<RightAside/>
+		</div>
+	);
 }
 
 export default App;
