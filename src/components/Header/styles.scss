@@ -3,7 +3,7 @@
 
 .header {
   @include flex($justify: space-between);
-  padding: 48px 46px 0;
+  padding: 48px 7.5% 0;
 }
 
 .header-left {
