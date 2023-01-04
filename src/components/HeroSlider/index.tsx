@@ -3,7 +3,13 @@ import Slider from "react-slick"
 
 import {IHeroSliderProps} from './type'
 
-const HeroSlider: FC<IHeroSliderProps> = () => {
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+
+import './styles.scss'
+import Button from '../UI/Button';
+
+const HeroSlider: FC<IHeroSliderProps> = ({className}) => {
   const settings = {
     dots: true,
     infinite: true,
@@ -11,7 +17,7 @@ const HeroSlider: FC<IHeroSliderProps> = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     dotsClass: 'hero-slider-dots',
-    className: 'hero-slider',
+    className: `hero-slider ${className}`,
   }
     
   return (
@@ -19,8 +25,14 @@ const HeroSlider: FC<IHeroSliderProps> = () => {
         {
             Array(3).fill(3).map(_=> {
                 return (
-                    <div className='hero-slider-item'>
-                        <img src={require('../../assets/images/slide.jpg')} alt="HeroSlide" />
+                    <div className='hero-slider__item hero-slider-item'>
+                        <h2 className='hero-slider-item__title'>The Crown</h2>
+                        <div className="hero-slider-item__img">
+                          <img src={require('../../assets/images/slide.jpg')} alt="HeroSlide" />
+                        </div>
+                        <div className="hero-slider-item__actions">
+                          <Button size={'large'} color={'primary'} text={'Watch Now'}/>
+                        </div>
                     </div>
                 )
             })

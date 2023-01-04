@@ -5,8 +5,6 @@ import { useAppSelector } from '@/store/hooks';
 import { HeroSlider, Popular } from '@/components';
 
 import "./styles.scss"
-import "slick-carousel/slick/slick.css"; 
-import "slick-carousel/slick/slick-theme.css";
 
 const Home: FC = () => {
 
@@ -15,7 +13,7 @@ const Home: FC = () => {
   return (
     <div className='home-page'>
       <div className='page-container'>
-        <HeroSlider/>
+        <HeroSlider className={'home-page__slider'}/>
 
         <Popular items={items} classname="home-page__popular"/>
 
