@@ -11,3 +11,4 @@ export { default as Completed } from './Completed';
 export { default as Settings } from './Settings';
 export { default as LogOut } from './LogOut';
 export { default as TvShows } from './TvShows';
+export {default as Movies} from './Movies';

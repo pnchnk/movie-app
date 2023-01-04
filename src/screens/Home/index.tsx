@@ -8,14 +8,24 @@ import "./styles.scss"
 
 const Home: FC = () => {
 
-  const items = useAppSelector(state => state.movies.data.series).filter((_, i) => i !== 0)
+  const items = useAppSelector(state => state.movies.data.series);
+  const sliderItem = items.filter((_, i) => i < 1);
+  const popularItems = items.filter((_, i) => i !== 0);
+
+  console.log(sliderItem)
 
   return (
     <div className='home-page'>
       <div className='page-container'>
-        <HeroSlider className={'home-page__slider'}/>
+        {
+          sliderItem.map(item => {
+            return (
+              <HeroSlider className={'home-page__slider'} item={item}/>
+            )
+          })
+        }
 
-        <Popular items={items} classname="home-page__popular"/>
+        <Popular items={popularItems} classname="home-page__popular"/>
 
       </div>
 

@@ -31,7 +31,7 @@ const PopularItem: FC<IPopularItem> = item => {
             </div>
             <div className="popular-item__footer">
                 <div className="popular-item__info">
-                    <span>{item.episodes} Ep</span>
+                    <span>{item.duration}</span>
                     <span>{item.genre}</span>
                 </div>
                 <div className="popular-item__actions">
