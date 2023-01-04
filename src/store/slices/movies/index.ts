@@ -63,6 +63,37 @@ const initialState = {
             },
 
         ],
+        anime:[
+            {
+                title: "Attack on Titan",
+                rating: 4.5,
+                duration: '139 Ep',
+                genre:"Action",
+                img: "titan-attack.jpg",
+            },
+            {
+                title: "Devilman",
+                rating: 5,
+                duration: '10 Ep',
+                genre:"Fantasy",
+                img: "devilman.jpg",
+            },
+            {
+                title: "Shaman King",
+                rating: 4,
+                duration: '64 Ep',
+                genre:"Action",
+                img: "shaman-king.jpg",
+            },
+            {
+                title: "Code Geass",
+                rating: 4.5,
+                duration: '10 Ep',
+                genre:"Action",
+                img: "codegeass.jpg",
+            },
+
+        ],
     }
 }
 

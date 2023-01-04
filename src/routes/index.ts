@@ -12,7 +12,8 @@ import {
 	TopRated,
 	TvShows,
 	Watchlist,
-	Movies
+	Movies,
+	Anime
 } from "@/screens";
 
 import {ReactComponent as HomeIcon} from "@/assets/icons/home.svg";
@@ -136,7 +137,7 @@ export const CATEGORIES: Omit<IRoutesItem, 'icon'>[] = [
 	{
 		title: 'Anime',
 		url: ROUTER_URLS.ANIME,
-		component: TvShows
+		component: Anime
 	}
 ]
 

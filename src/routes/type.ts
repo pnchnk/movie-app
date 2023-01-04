@@ -15,7 +15,7 @@ export enum ROUTER_URLS {
 	LOG_OUT = '/logout',
 
 	MOVIES = '/movies',
-	TV_SHOWS = '/tv-shows',
+	TV_SHOWS = '/',
 	ANIME = '/anime'
 }
 
