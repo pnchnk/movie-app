@@ -3,3 +3,57 @@
 .right-aside {
   width: 25%;
 }
+
+.right-aside-header {
+  @include flex($justify: space-between);
+  padding-right: 38px;
+
+  &__notification{
+    width: 56px;
+    height: 56px;
+    border-radius: 15px;
+    background: rgba(249, 249, 249, 0.2);
+    z-index: 1;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__profile{
+    @include flex($align: center);
+
+    span {
+      font-weight: 800;
+      font-size: 16px;
+      line-height: 100%;
+      display: inline-block;
+      margin-right: 11px;
+      &::before {
+        left: 20px;
+        background: url('../../assets/icons/previous.svg') no-repeat center/cover;
+      } 
+    }
+  }
+
+  &__profile-picture{
+    img {
+      width: 56px;
+      height: 56px;
+      border-radius: 15px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  } 
+}
+
+.right-aside-header-arrow {
+  transform: rotate(90deg);
+  margin-right: 13px;
+  &:hover {
+    cursor: pointer;
+  }
+}

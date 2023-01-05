@@ -23,8 +23,8 @@ body {
 }
 
 .right-aside, .left-aside {
-    background: $background;
-  height: 100vh;
+  background: $background;
+  min-height: 100vh;
   padding: 48px 0 48px 38px;
 }
 
