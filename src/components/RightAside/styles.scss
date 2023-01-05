@@ -57,3 +57,132 @@
     cursor: pointer;
   }
 }
+
+
+.right-aside-action-continue {
+  margin-top: 60px;
+  &__header {
+    display: flex;
+    padding-right: 38px;
+  }
+
+  &__title {
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 100%;
+  }
+
+  &__prev {
+    transform: rotate(180deg);
+    margin-left: 21px;
+    opacity: 0.67;
+    align-self: center;
+  }
+
+  &__next {
+    margin-left: 22px;
+    align-self: center;
+  }
+
+  &__more {
+    margin-left: 45px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 100%;
+    opacity: 0.67;
+    display: inline-flex;
+    align-self: center;
+    margin-left: auto;
+  }
+
+  &__more-next {
+    align-self: center;
+    margin-left: 11px;
+  }
+}
+
+.right-aside-action-top {
+  margin-top: 60px;
+
+  &__header {
+    display: flex;
+    padding-right: 38px;
+  }
+
+  &__title {
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 100%;
+  }
+
+  &__prev {
+    transform: rotate(180deg);
+    margin-left: 21px;
+    opacity: 0.67;
+    align-self: center;
+  }
+
+  &__next {
+    margin-left: 22px;
+    align-self: center;
+  }
+
+  &__more {
+    margin-left: 45px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 100%;
+    opacity: 0.67;
+    display: inline-flex;
+    margin-left: auto;
+    align-self: center;
+  }
+
+  &__more-next {
+    align-self: center;
+    margin-left: 11px;
+  }
+}
+
+.right-aside-action-genres {
+  margin-top: 60px;
+
+  &__header {
+    display: flex;
+    padding-right: 38px;
+  }
+
+  &__title {
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 100%;
+  }
+
+  &__prev {
+    transform: rotate(180deg);
+    margin-left: 21px;
+    opacity: 0.67;
+    align-self: center;
+  }
+
+  &__next {
+    margin-left: 22px;
+    align-self: center;
+  }
+
+  &__more {
+    margin-left: 45px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 100%;
+    opacity: 0.67;
+    display: inline-flex;
+    align-self: center;
+    margin-left: auto;
+  }
+
+  &__more-next {
+    align-self: center;
+    margin-left: 11px;
+  }
+}
