@@ -5,3 +5,4 @@ export { default as Header } from '@/components/Header';
 export { default as Popular } from '@/components/Popular';
 export { default as PopularItem } from '@/components/Popular/PopularItem';
 export { default as HeroSlider } from '@/components/HeroSlider';
+export { default as ContinueSlider } from '@/components/ContinueSlider';

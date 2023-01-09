@@ -1,0 +1,70 @@
+@import 'src/assets/styles/helpers';
+
+.continue-slider {
+    .slick-track {
+        display: flex;
+       
+    }
+
+    .slick-arrow {
+   
+        z-index: 1;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+    
+        &::before{
+            content: "";
+            width: 8px;
+            height: 14px;
+            display: block;          
+        }
+    }
+    .slick-prev {
+        top: -12px;
+        left: 28%;
+        &::before {
+            background: url('../../assets/icons/previous.svg') no-repeat center/cover;
+        }
+    }
+    .slick-next {
+        top: -12px;
+        right: 60%;
+        &::before {
+            background: url('../../assets/icons/next.svg') no-repeat center/cover;
+        }
+    }
+}
+
+.continue-slider-item {
+    position: relative;
+    background-color: $main;
+    border-radius: 12px;
+    width: 210px !important;
+    height: 129px;
+    margin-right: 10px;
+    overflow: hidden;
+    padding: 10px;
+    margin-top: 30px;
+
+    &__header {
+        display: flex;
+    }
+    &__img {
+        width: 55px;
+        height: 59px;
+       img {
+        border-radius: 8px;
+       }
+    }
+
+    &__title {
+        margin-left: 10px;
+    }
+
+    &__actions {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+}

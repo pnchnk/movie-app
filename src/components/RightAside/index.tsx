@@ -3,6 +3,8 @@ import React, { FC } from 'react';
 import { ReactComponent as ArrowIcon } from '@/assets/icons/next.svg';
 import { ReactComponent as NotificationIcon } from '@/assets/icons/notification.svg';
 
+import ContinueSlider from '@/components/ContinueSlider';
+
 import './styles.scss';
 
 const RightAside: FC = () => {
@@ -25,12 +27,12 @@ const RightAside: FC = () => {
         <div className="right-aside-action-continue">
           <div className="right-aside-action-continue__header">
             <span className='right-aside-action-continue__title'>Continue</span>
-            <ArrowIcon className="right-aside-action-continue__prev" />
-            <ArrowIcon className="right-aside-action-continue__next" />
+            {/* <ArrowIcon className="right-aside-action-continue__prev" />
+            <ArrowIcon className="right-aside-action-continue__next" /> */}
             <span className='right-aside-action-continue__more'>See More</span>
             <ArrowIcon className="right-aside-action-continue__more-next" />
           </div>
-
+          <ContinueSlider/>
         </div>
 
         <div className="right-aside-action-top">
