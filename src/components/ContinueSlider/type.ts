@@ -1,6 +1,6 @@
 export interface IContinueSliderProps {
     className?: string,
-    item?: ISliderItem,
+    item?: ISliderItem[],
 }
 
 export interface ISliderItem {
