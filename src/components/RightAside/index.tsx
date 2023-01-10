@@ -12,8 +12,9 @@ import './styles.scss';
 
 const RightAside: FC = () => {
 
-  const continueSlider =  useAppSelector(state => state.movies.data.continue);
-  const topItems = useAppSelector(state => state.movies.data.top);
+  const profile = useAppSelector(state => state.profile.data.profileData);
+  const continueSlider =  useAppSelector(state => state.profile.data.continue);
+  const topItems = useAppSelector(state => state.profile.data.top);
 
   console.log(topItems)
 
@@ -24,11 +25,19 @@ const RightAside: FC = () => {
           <NotificationIcon />
         </div>
         <div className="right-aside-header__profile">
-          <span>Samantha</span>
-          <ArrowIcon className="right-aside-header-arrow" />
-          <div className="right-aside-header__profile-picture">
-            <img src={require('../../assets/images/profile.jpg')} alt="" />
-          </div>
+          {
+            profile?.map(user => {
+              return (
+                <>
+                  <span>{user.name}</span>
+                  <ArrowIcon className="right-aside-header-arrow" />
+                  <div className="right-aside-header__profile-picture">
+                    <img src={require(`../../assets/images/${user.img}`)} alt="Profile picture" />
+                  </div>
+                </>
+              )
+            })
+          }
         </div>
       </div>
       <div className="right-aside-action">
