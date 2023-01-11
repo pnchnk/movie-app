@@ -12,10 +12,21 @@ const ContinueSlider: FC<IContinueSliderProps> = ({ className, item }) => {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 500,
+    speed: 300,
     slidesToShow: 2,
     slidesToScroll: 1,
     className: `continue-slider ${className}`,
+    responsive: [
+      {
+        breakpoint: 1600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: false
+        }
+      },
+    ]
   };
 
   return (

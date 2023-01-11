@@ -2,8 +2,7 @@
 
 .continue-slider {
     .slick-track {
-        display: flex;
-       
+        display: flex;          
     }
 
     .slick-arrow {
@@ -40,11 +39,9 @@
     position: relative;
     background-color: $main;
     border-radius: 12px;
-    width: 210px !important;
     height: 129px;
-    margin-right: 10px;
     overflow: hidden;
-    padding: 10px;
+    padding: 10px 10px ;
     margin-top: 30px;
 
     &__header {
@@ -66,5 +63,14 @@
         display: flex;
         justify-content: space-between;
         margin-top: 10px;
+    }
+}
+
+
+@media (max-width:1900px) {
+    .continue-slider{
+        .slick-slide{
+            padding-right: 10px;
+        }
     }
 }
