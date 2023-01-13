@@ -5,8 +5,7 @@
         display: flex;          
     }
 
-    .slick-arrow {
-   
+    .slick-arrow {  
         z-index: 1;
         display: flex !important;
         align-items: center;
@@ -43,6 +42,8 @@
     overflow: hidden;
     padding: 10px 10px ;
     margin-top: 30px;
+    width: 190px !important;
+    
 
     &__header {
         display: flex;
@@ -57,6 +58,7 @@
 
     &__title {
         margin-left: 10px;
+        font-weight: 900;
     }
 
     &__actions {
@@ -71,6 +73,39 @@
     .continue-slider{
         .slick-slide{
             padding-right: 10px;
+        }
+    }
+}
+
+@media (max-width:1700px) {
+    .continue-slider-item {
+        width: 170px !important;
+    }
+}
+
+@media (max-width:1600px) {
+    .continue-slider {
+        .slick-prev {
+            top: -12px;
+            left: 38%;
+            &::before {
+                background: url('../../assets/icons/previous.svg') no-repeat center/cover;
+            }
+        }
+        .slick-next {
+            top: -12px;
+            right: 50%;
+            &::before {
+                background: url('../../assets/icons/next.svg') no-repeat center/cover;
+            }
+        }
+    }
+    .continue-slider-item {
+        width: 80% !important;
+
+        &__title {
+            margin-left: auto;
+            font-size: 24px;
         }
     }
 }

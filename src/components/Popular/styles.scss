@@ -24,6 +24,12 @@
     padding: 20px 20px 10px 20px;
     @include flex(column, $justify: space-between);
 
+    &__header {
+        span {
+            font-weight: 900;
+        }
+    }
+
     &__img {
         position: absolute;
         top: 0;
