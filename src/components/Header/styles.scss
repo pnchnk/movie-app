@@ -1,8 +1,7 @@
 @import 'src/assets/styles/helpers';
 
-
 .header {
-  @include flex($justify: space-between);
+  @include flex($justify: space-between, $align: center);
   padding: 48px 7.5% 0;
 }
 
@@ -16,6 +15,7 @@
     font-weight: 600;
     font-size: 24px;
     text-decoration: none;
+    align-items: center;
     @include transition;
 
     &::before {
@@ -39,5 +39,55 @@
         opacity: 1;
       }
     }
+  }
+}
+
+.header-right {
+  @include flex($justify: space-between);
+  align-content: center;
+}
+
+.header-right-search {
+  display: flex;
+  justify-content: space-between;
+  width: 315px;
+  height: 56px;
+  background-color: $background;
+  padding: 15px 25px;
+  display: flex;
+  border-radius: 12px;
+
+  &__input {
+    display: flex;
+
+    input {
+      background-color: transparent;
+      border: none;
+      outline: none;
+      margin-left: 15px;
+      width: 75px;
+      color: $light;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 1400px) {
+  .header-right-search {
+    width: 200px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .header {
+    flex-direction: column-reverse;
+  }
+
+  .header-right-search {
+    margin-bottom: 30px;
   }
 }

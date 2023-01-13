@@ -109,3 +109,20 @@
         }
     }
 }
+
+
+
+@media (max-width: 1200px) {
+    .continue-slider {
+
+        .slick-arrow {  
+            display: none !important;
+        }
+    }
+
+    .continue-slider-item {
+        &__title {
+            font-size: 16px;
+        }
+    }
+  }
