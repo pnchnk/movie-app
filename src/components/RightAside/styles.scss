@@ -186,3 +186,17 @@
     margin-left: 11px;
   }
 }
+
+
+
+@media (max-width: 992px) {
+  .right-aside {
+    width: 30%;
+  }
+  .right-aside-header{
+    &__notification {
+      display: none !important;
+    }
+
+  }
+}

@@ -48,3 +48,26 @@
     }
   }
 }
+
+
+@media (max-width: 992px) {
+  .left-aside {
+    width: 8%;
+    padding: 48px 5px 48px 5px !important ;
+  }
+
+  .aside-nav {
+    &__item {
+      align-items: center;
+    }
+  }
+
+  .aside-nav-item {
+    align-self: center;
+    &__link {
+      span {
+        display: none;
+      }
+    }
+  } 
+}
