@@ -18,17 +18,18 @@ const GenresSlider: FC<IGenresSliderProps> = ({ className, item }) => {
     rows: 2,
     slidesPerRow: 2,
     className: `genres-slider ${className}`,
-    // responsive: [
-    //   {
-    //     breakpoint: 1600,
-    //     settings: {
-    //       slidesToShow: 1,
-    //       slidesToScroll: 1,
-    //       infinite: true,
-    //       dots: false,
-    //     },
-    //   },
-    // ],
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          rows: 1,
+          infinite: true,
+          dots: false,
+        },
+      },
+    ],
   };
 
   return (
