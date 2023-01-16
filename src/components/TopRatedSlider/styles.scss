@@ -154,3 +154,20 @@
         }
     }
   }
+
+  @media (max-width: 768px) {
+    .top-slider-item {
+        &__description {
+            flex-direction: column;
+        }
+        &__title {
+            font-size: 12px;
+        }
+
+        &__actions {
+            .button {
+                transform: scale(0.8);
+            }
+        }
+    }
+  }

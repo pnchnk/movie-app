@@ -83,3 +83,30 @@
         display: none !important;
     }
 }
+
+@media (max-width:768px) {
+    .popular-item {
+        &__rating {
+            display: flex;
+            justify-content: center;
+            transform: scale(0.9);
+        }
+
+        &__info {
+            flex-direction: column;
+            span {
+                font-size: 12px;
+                display: inline-flex;
+            }
+        }
+        &__actions {
+            .button {
+                transform: scale(0.8);
+            }
+        }
+    }
+    .popular-item-title {
+        font-size: 14px;
+    }
+    
+}

@@ -21,7 +21,7 @@ const PopularItem: FC<IPopularItem> = item => {
                 <div className="popular-item__rating">
                     {
                         new Array(rating).fill(rating).map(_=> {
-                            return <Star/>
+                            return <Star className="popular-item__star"/>
                         })
                     }
                     {

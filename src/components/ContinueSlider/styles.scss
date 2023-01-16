@@ -126,3 +126,17 @@
         }
     }
   }
+
+  @media (max-width: 768px) {
+    .continue-slider-item {
+        &__title {
+            font-size: 12px;
+        }
+
+        &__actions {
+            .button {
+                transform: scale(0.8);
+            }
+        }
+    }
+  }

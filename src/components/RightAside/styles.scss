@@ -200,3 +200,21 @@
 
   }
 }
+
+@media (max-width: 768px) {
+  .right-aside-action-continue {
+    &__title {
+      font-size: 14px;
+    }
+  }
+  .right-aside-action-top {
+    &__title {
+      font-size: 14px;
+    }
+  }
+  .right-aside-action-genres {
+    &__title {
+      font-size: 14px;
+    }
+  }
+}
